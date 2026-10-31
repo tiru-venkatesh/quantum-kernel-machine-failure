@@ -1,0 +1,23 @@
+QML AI4I RESEARCH PROJECT — SIMPLE WINDOWS START
+
+1. Download and install Python 3.11 from https://www.python.org/downloads/windows/.
+   IMPORTANT: Tick the checkbox Add Python to PATH in the installer.
+2. Extract this ZIP to a normal folder. Do not run files from inside the ZIP preview.
+3. Open the extracted folder.
+4. Double-click START_QML_WINDOWS.bat.
+5. Wait while Python creates a virtual environment, installs the packages and downloads the UCI dataset.
+6. When it says SUCCESS, open results_quick\run_summary.txt.
+7. Send the full error text to ChatGPT if it fails. Do not guess at the fix.
+8. After the quick test succeeds, double-click RUN_FULL_EXPERIMENT.bat for the larger run.
+
+FILES
+- run_experiment.py: complete Python experiment source
+- requirements.txt: dependency list
+- START_QML_WINDOWS.bat: setup + quick Qiskit simulator run
+- RUN_FULL_EXPERIMENT.bat: larger experiment
+
+RESEARCH DISCLOSURES
+- UCI AI4I 2020 is a synthetic predictive-maintenance dataset, not live factory records.
+- This project uses Qiskit's StatevectorSampler simulator. No physical QPU is used.
+- Equal class sampling changes the original class prevalence. Precision and accuracy are not factory deployment estimates.
+- Do not report metrics until you have actually run the code. Save the generated results folder.

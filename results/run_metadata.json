@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-10-31T18:07:48.378399+00:00",
+  "dataset": "AI4I 2020 Predictive Maintenance Dataset",
+  "dataset_source": "UCI Machine Learning Repository, dataset 601",
+  "dataset_id": 601,
+  "dataset_doi": "10.24432/C5HS5C",
+  "dataset_license": "CC BY 4.0; attribution required",
+  "uci_dataset_is_synthetic": true,
+  "uci_dataset_rows_loaded": 10000,
+  "uci_failure_count_loaded": 339,
+  "sample_design": "Case-control: equal number of failure and non-failure rows sampled without replacement",
+  "per_class_sampled": 120,
+  "sampled_rows": 240,
+  "train_rows": 180,
+  "test_rows": 60,
+  "selected_features": [
+    "temperature_difference_K",
+    "rotational_speed_rpm",
+    "torque_Nm",
+    "tool_wear_min"
+  ],
+  "excluded_features": [
+    "UID",
+    "Product ID",
+    "Type",
+    "individual failure-mode labels"
+  ],
+  "target": "Machine failure",
+  "split_seed": 42,
+  "test_size": 0.25,
+  "feature_map": "Qiskit ZZFeatureMap, linear entanglement",
+  "qubits": 4,
+  "feature_map_reps": 2,
+  "sampler": "Qiskit StatevectorSampler (finite-shot simulation)",
+  "shots_per_fidelity_estimate": 1024,
+  "physical_qpu_used": false,
+  "train_kernel_matrix_seconds": 190.53278080000018,
+  "test_kernel_matrix_seconds": 122.79829930000051,
+  "quantum_svm_fit_seconds": 0.004407899999932852,
+  "classical_fit_seconds": {
+    "Logistic Regression": {
+      "fit_seconds": 0.014847800001007272
+    },
+    "RBF-SVM": {
+      "fit_seconds": 0.00752949999878183
+    },
+    "Random Forest": {
+      "fit_seconds": 1.0353414000019256
+    }
+  },
+  "software": {
+    "python": "3.13.14",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit_learn": "1.9.1",
+    "qiskit": "2.6.1",
+    "qiskit_machine_learning": "0.9.1"
+  },
+  "results": {
+    "Logistic Regression": {
+      "accuracy": 0.7666666666666667,
+      "balanced_accuracy": 0.7666666666666666,
+      "failure_precision": 0.8333333333333334,
+      "failure_recall": 0.6666666666666666,
+      "failure_f1": 0.7407407407407407,
+      "roc_auc": 0.8966666666666667,
+      "average_precision": 0.9044789544508508,
+      "confusion_matrix_tn_fp_fn_tp": [
+        26,
+        4,
+        10,
+        20
+      ]
+    },
+    "RBF-SVM": {
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666667,
+      "failure_precision": 0.9310344827586207,
+      "failure_recall": 0.9,
+      "failure_f1": 0.9152542372881356,
+      "roc_auc": 0.9377777777777778,
+      "average_precision": 0.9640656816426428,
+      "confusion_matrix_tn_fp_fn_tp": [
+        28,
+        2,
+        3,
+        27
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.9,
+      "balanced_accuracy": 0.9,
+      "failure_precision": 0.9285714285714286,
+      "failure_recall": 0.8666666666666667,
+      "failure_f1": 0.896551724137931,
+      "roc_auc": 0.9466666666666668,
+      "average_precision": 0.964362909043216,
+      "confusion_matrix_tn_fp_fn_tp": [
+        28,
+        2,
+        4,
+        26
+      ]
+    },
+    "Qiskit Quantum Kernel SVM": {
+      "accuracy": 0.7166666666666667,
+      "balanced_accuracy": 0.7166666666666667,
+      "failure_precision": 0.696969696969697,
+      "failure_recall": 0.7666666666666667,
+      "failure_f1": 0.7301587301587301,
+      "roc_auc": 0.7455555555555556,
+      "average_precision": 0.7108388243724683,
+      "confusion_matrix_tn_fp_fn_tp": [
+        20,
+        10,
+        7,
+        23
+      ]
+    }
+  },
+  "interpretation_warning": "Metrics are measured on a balanced case-control subset, not at the original 3.39% failure prevalence. Precision and accuracy therefore should not be treated as deployment estimates. The UCI dataset is synthetic; this is not field-validated industrial evidence. No quantum advantage or hardware advantage is claimed."
+}

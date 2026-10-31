@@ -1,0 +1,16 @@
+QML experiment run completed
+Dataset: UCI Machine Learning Repository, dataset 601
+UCI rows loaded: 10000; failures: 339
+Case-control subset: 240 rows (120 per class)
+Train/test: 180/60
+Quantum: 2-repetition ZZFeatureMap, 4 qubits, 1024 shots
+Physical quantum processor used: NO
+
+Logistic Regression: accuracy=0.767, balanced_accuracy=0.767, failure_precision=0.833, failure_recall=0.667, failure_F1=0.741, ROC_AUC=0.897, AP=0.904
+RBF-SVM: accuracy=0.917, balanced_accuracy=0.917, failure_precision=0.931, failure_recall=0.900, failure_F1=0.915, ROC_AUC=0.938, AP=0.964
+Random Forest: accuracy=0.900, balanced_accuracy=0.900, failure_precision=0.929, failure_recall=0.867, failure_F1=0.897, ROC_AUC=0.947, AP=0.964
+Qiskit Quantum Kernel SVM: accuracy=0.717, balanced_accuracy=0.717, failure_precision=0.697, failure_recall=0.767, failure_F1=0.730, ROC_AUC=0.746, AP=0.711
+
+Caution: case-control sampling changes the original prevalence; precision/accuracy are not deployment estimates.
+Caution: UCI identifies AI4I 2020 as a synthetic dataset, not direct factory measurements.
+Caution: this run uses a simulator, not physical quantum hardware; no quantum advantage is established.
